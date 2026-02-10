@@ -1,5 +1,6 @@
-'use client'
+'use client';
 
+import React from 'react'; // or whatever your next line is...
 import PageLayout from '@/components/PageLayout'
 import Link from 'next/link'
 import Image from 'next/image'
