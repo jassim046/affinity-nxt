@@ -47,15 +47,17 @@ export default function HomeContent() {
     tabs.forEach(tab => {
       tab.addEventListener('click', () => {
         const target = (tab as HTMLElement).dataset.tab;
+        // Remove active from all buttons
         document.querySelectorAll('.tech-tab').forEach(t => t.classList.remove('active'));
+        // Add active to clicked button
         tab.classList.add('active');
+        // Toggle content visibility
         document.querySelectorAll('.tech-content').forEach(content => {
           content.classList.toggle('active', (content as HTMLElement).dataset.tab === target);
         });
       });
     });
 
-    // Cleanup function to prevent memory leaks
     return () => {
       counters.forEach((c) => observer.unobserve(c));
     };
@@ -150,32 +152,6 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Mobile Stats */}
-      <div className="col-md-5 col-lg-6 mobile-tablet-only">
-        <div className="unique-stats-wrapper" style={{background: '#14152c'}}>
-          <div className="unique-stats-box">
-            <div className="unique-stats-grid">
-              <div className="unique-stat-card">
-                <span className="unique-stat-number counter" data-target="21" data-suffix="+">0</span>
-                <span className="unique-stat-label">Years of Excellence</span>
-              </div>
-              <div className="unique-stat-card">
-                <span className="unique-stat-number counter" data-target="300" data-suffix="+">0</span>
-                <span className="unique-stat-label">Clients</span>
-              </div>
-              <div className="unique-stat-card">
-                <span className="unique-stat-number counter" data-target="400" data-suffix="+">0</span>
-                <span className="unique-stat-label">Projects</span>
-              </div>
-              <div className="unique-stat-card">
-                <span className="unique-stat-number counter" data-target="15" data-suffix="+">0</span>
-                <span className="unique-stat-label">Nations</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* About Section */}
       <section id="about">
         <div className="container mil-p-60-30">
@@ -205,7 +181,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Services Swiper */}
+      {/* Services Carousel */}
       <section className="services-carousel">
         <div className="container-fluid">
           <Swiper
@@ -223,11 +199,11 @@ export default function HomeContent() {
             }}
           >
             <SwiperSlide className="service-slide"><h4>AI Automation</h4></SwiperSlide>
-            <SwiperSlide className="service-slide"><h4>Mobile App Development</h4></SwiperSlide>
+            <SwiperSlide className="service-slide"><h4>Mobile Apps</h4></SwiperSlide>
             <SwiperSlide className="service-slide"><h4>ERP Solutions</h4></SwiperSlide>
-            <SwiperSlide className="service-slide"><h4>Portals</h4></SwiperSlide>
+            <SwiperSlide className="service-slide"><h4>Web Portals</h4></SwiperSlide>
             <SwiperSlide className="service-slide"><h4>E-Commerce</h4></SwiperSlide>
-            <SwiperSlide className="service-slide"><h4>Web Development</h4></SwiperSlide>
+            <SwiperSlide className="service-slide"><h4>Cloud Solutions</h4></SwiperSlide>
           </Swiper>
         </div>
       </section>
@@ -236,123 +212,105 @@ export default function HomeContent() {
       <section className="tech-section">
         <div className="tech-tabs">
           <button className="tech-tab active" data-tab="frontend">Modern Frameworks</button>
-          <button className="tech-tab" data-tab="robust-programming">Backend Programming</button>
-          <button className="tech-tab" data-tab="scalable-database">Databases</button>
+          <button className="tech-tab" data-tab="backend">Programming</button>
+          <button className="tech-tab" data-tab="database">Databases</button>
+          <button className="tech-tab" data-tab="cloud">Cloud & DevOps</button>
         </div>
 
         <div className="tech-content-wrapper">
           <div className="tech-content active" data-tab="frontend">
             <h2>Modern Frontend Development</h2>
+            <p>We leverage cutting-edge frameworks like React and Next.js for high-performance interfaces.</p>
             <div className="tech-logos">
               <div className="logo-card"><span>React</span></div>
               <div className="logo-card"><span>Next.js</span></div>
+              <div className="logo-card"><span>Angular</span></div>
+              <div className="logo-card"><span>Tailwind</span></div>
             </div>
           </div>
-          {/* Add more tech-content blocks as needed */}
+
+          <div className="tech-content" data-tab="backend">
+            <h2>Robust Backend Engineering</h2>
+            <p>Reliable server-side solutions using Python, PHP, and Node.js.</p>
+            <div className="tech-logos">
+              <div className="logo-card"><span>Python</span></div>
+              <div className="logo-card"><span>PHP</span></div>
+              <div className="logo-card"><span>Node.js</span></div>
+            </div>
+          </div>
+
+          <div className="tech-content" data-tab="database">
+            <h2>Secure Data Management</h2>
+            <p>Scaling your data with MySQL, PostgreSQL, and MongoDB.</p>
+            <div className="tech-logos">
+              <div className="logo-card"><span>MySQL</span></div>
+              <div className="logo-card"><span>Postgres</span></div>
+              <div className="logo-card"><span>MongoDB</span></div>
+            </div>
+          </div>
+
+          <div className="tech-content" data-tab="cloud">
+            <h2>DevOps & Deployment</h2>
+            <p>Cloud infrastructure on AWS, Azure, and Google Cloud.</p>
+            <div className="tech-logos">
+              <div className="logo-card"><span>AWS</span></div>
+              <div className="logo-card"><span>Azure</span></div>
+              <div className="logo-card"><span>Docker</span></div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      {/* Clients + Services Section (REPLACE with this block) */}
-  <section className="ai-clients-services-section">
-    <div className="content-section">
-      {/* What Sets Us Apart */}
       <section className="mil-dark-bg">
-        <div className="mi-invert-fix">
-          <div className="mil-animation-frame">
-            <div
-              className="mil-animation mil-position-1 mil-scale"
-              data-value-1="2.4"
-              data-value-2="1.4"
-              style={{ top: 300, right: "-100px" }}
-            />
-            <div
-              className="mil-animation mil-position-2 mil-scale"
-              data-value-1={2}
-              data-value-2={1}
-              style={{ left: 150 }}
-            />
+        <div className="container mil-p-80-0">
+          <div className="mil-complex-text justify-content-center mil-mb-60">
+            <h2 className="mil-h1 mil-muted mil-center">Our <span className="mil-thin">Solutions</span></h2>
           </div>
-          <div className="container mil-p-80-0">
-            <div className="mil-mb-30">
-              <div className="mil-complex-text justify-content-center">
-                <h2 className="mil-h1 mil-muted mil-center">
-                  Our <span className="mil-thin">Solutions</span>
-                </h2>
+          <div className="row mil-services-grid m-0">
+            <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+              <div className="mil-service-card-sm mil-up">
+                <div className="ai-partner-logo mil-mb-30">
+                  <img src="/img/solution/1.png" alt="NAAC ERP" />
+                </div>
+                <p className="mil-light-soft mil-mb-30">A NAAC-focused ERP for colleges, enabling effortless documentation and reporting.</p>
               </div>
             </div>
-            <div className="row mil-services-grid m-0 ">
-              <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
-                <div className="mil-service-card-sm mil-up">
-                  <div className="ai-partner-logo mil-mb-30">
-                    <img src="img/solution/1.png" alt="" />
-                  </div>
-                  <p className="mil-light-soft mil-mb-30">
-                    A NAAC-focused ERP for colleges, enabling effortless data
-                    entry, streamlined documentation, and compliance-ready
-                    reporting for accreditation and re-accreditation.
-                  </p>
+            <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+              <div className="mil-service-card-sm mil-up">
+                <div className="ai-partner-logo mil-mb-30">
+                  <img src="/img/solution/2.png" alt="Attendance" />
                 </div>
+                <p className="mil-light-soft mil-mb-30">Hybrid mobile app for tracking student attendance with FYUG support.</p>
               </div>
-              <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
-                <div className="mil-service-card-sm mil-up">
-                  <div
-                    className="ai-partner-logo mil-mb-30"
-                    style={{ height: "60px !important" }}
-                  >
-                    <img src="img/solution/2.png" alt="" />
-                  </div>
-                  <p className="mil-light-soft mil-mb-30">
-                    A hybrid mobile app for colleges to record, track, and
-                    report student attendance class-wise and hour-wise, with
-                    FYUG support and consolidated reporting.
-                  </p>
+            </div>
+            <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+              <div className="mil-service-card-sm mil-up">
+                <div className="ai-partner-logo mil-mb-30">
+                  <img src="/img/solution/3.png" alt="Fee Collection" />
                 </div>
+                <p className="mil-light-soft mil-mb-30">Secure fee collection platform for schools with real-time reporting.</p>
               </div>
-              <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
-                <div className="mil-service-card-sm mil-up">
-                  <div className="ai-partner-logosolution mil-mb-30">
-                    <img src="img/solution/3.png" alt="" />
-                  </div>
-                  <p className="mil-light-soft mil-mb-30">
-                    A simple, secure fee collection platform for schools and
-                    colleges, offering online payments, automated receipts, and
-                    real-time reporting.
-                  </p>
+            </div>
+            <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+              <div className="mil-service-card-sm mil-up">
+                <div className="ai-partner-logo mil-mb-30">
+                  <img src="/img/solution/4.png" alt="Logistics" />
                 </div>
+                <p className="mil-light-soft mil-mb-30">Web app for tracking consignments in real-time for logistics companies.</p>
               </div>
-              <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
-                <div className="mil-service-card-sm mil-up">
-                  <div className="ai-partner-logo mil-mb-30">
-                    <img src="img/solution/4.png" alt="" />
-                  </div>
-                  <p className="mil-light-soft mil-mb-30">
-                    A web app for logistics companies that lets customers track
-                    consignments in real time with ease, improving transparency
-                    and customer trust.
-                  </p>
+            </div>
+            <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+              <div className="mil-service-card-sm mil-up">
+                <div className="ai-partner-logo mil-mb-30">
+                  <img src="/img/solution/5.png" alt="Temple" />
                 </div>
-              </div>
-              <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
-                <div className="mil-service-card-sm mil-up">
-                  <div className="ai-partner-logo mil-mb-30">
-                    <img src="img/solution/5.png" alt="" />
-                  </div>
-                  <p className="mil-light-soft mil-mb-30">
-                    A web app for temples that enables devotees to book
-                    offerings online with secure payments, multi-deity support,
-                    and user-friendly profiles.
-                  </p>
-                </div>
+                <p className="mil-light-soft mil-mb-30">Online booking platform for temples with secure payment gateways.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* services end
-       */}
-    </div>
-  </section>
 
       {/* Empower Section */}
       <section id="industries">
