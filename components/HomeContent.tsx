@@ -1,4 +1,6 @@
-'use client'
+'use client';
+
+import React from 'react'; // or whatever your next line is...
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import { Swiper, SwiperSlide } from 'swiper/react'
