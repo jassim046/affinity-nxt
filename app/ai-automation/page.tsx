@@ -47,32 +47,37 @@ export default function AIAutomationPage() {
             </p>
               {/* AI Partner / Technology Logos */}
   <div className="ai-hero-logos">
-    <a
-      href="https://seagulljobs4u.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="ai-logo"
-      onclick="event.stopPropagation();"
-    >
-      <img src="img/partners/Seagulljobs4u.png" alt="Seagull Jobs Logo" />
-    </a>
-    <a
-      href="https://hiremint.net/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="ai-logo"
-      onclick="event.stopPropagation();"
-    >
-      <img src="img/partners/hiremint.png" alt="HireMint Logo" />
-    </a>
-    <a
-      href="javascript:void(0);"
-      className="ai-logo"
-      onclick="event.stopPropagation();"
-    >
-      <img src="img/partners/thathasthu-logo.png" alt="Thathasthu Logo" />
-    </a>
-  </div>
+  <a
+    href="https://seagulljobs4u.com/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="ai-logo"
+    onClick={(e) => e.stopPropagation()}
+  >
+    <img src="/img/partners/Seagulljobs4u.png" alt="Seagull Jobs Logo" />
+  </a>
+
+  <a
+    href="https://hiremint.net/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="ai-logo"
+    onClick={(e) => e.stopPropagation()}
+  >
+    <img src="/img/partners/hiremint.png" alt="HireMint Logo" />
+  </a>
+
+  <a
+    href="#"
+    className="ai-logo"
+    onClick={(e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    }}
+  >
+    <img src="/img/partners/thathasthu-logo.png" alt="Thathasthu Logo" />
+  </a>
+</div>
           </div>
 
           <div className="ai-services-grid">
