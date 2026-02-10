@@ -8,7 +8,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 export default function HomeContent() {
-  // We use "useState" to handle the tabs. This is much better than the old way!
+  // 1. Fixed State: Added all 8 categories back
   const [activeTab, setActiveTab] = useState('frontend');
 
   useEffect(() => {
@@ -71,10 +71,11 @@ export default function HomeContent() {
           <div className="container">
             <div className="mil-banner-content mil-up">
               <div className="row">
-                <div className="col-md-7">
+                <div className="col-md-7 col-lg-6">
                   <h2 className="mil-muted" style={{fontSize: '40px'}}>
                     Empowering <br />
-                    <span className="mil-thin">Digital Transformation</span>
+                    <span className="mil-thin">Digital Transformation</span><br />
+                    <span className="mil-thin">Since 2004</span>
                   </h2>
                   <p className="mil-light-soft mil-mb-30 mil-mt-30">
                     For over two decades, Affinity Interactive has been the catalyst behind successful digital journeys.
@@ -88,158 +89,149 @@ export default function HomeContent() {
                     </Link>
                   </div>
                 </div>
-                <div className="col-md-5 desktop-only">
-                    <div className="unique-stats-grid">
-                        <div className="unique-stat-card">
-                          <span className="unique-stat-number counter" data-target="21" data-suffix="+">0</span>
-                          <span className="unique-stat-label">Years</span>
-                        </div>
-                        <div className="unique-stat-card">
-                          <span className="unique-stat-number counter" data-target="300" data-suffix="+">0</span>
-                          <span className="unique-stat-label">Clients</span>
-                        </div>
-                    </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Technologies Section - FIXED TABS */}
+      {/* Technologies Section - ALL 8 TABS RESTORED */}
       <section className="tech-section mil-p-120-90">
         <div className="container">
-            <div className="tech-tabs">
-                <button className={`tech-tab ${activeTab === 'frontend' ? 'active' : ''}`} onClick={() => setActiveTab('frontend')}>Modern Frameworks</button>
-                <button className={`tech-tab ${activeTab === 'robust-programming' ? 'active' : ''}`} onClick={() => setActiveTab('robust-programming')}>Programming</button>
-                <button className={`tech-tab ${activeTab === 'scalable-database' ? 'active' : ''}`} onClick={() => setActiveTab('scalable-database')}>Databases</button>
-                <button className={`tech-tab ${activeTab === 'cloud' ? 'active' : ''}`} onClick={() => setActiveTab('cloud')}>Cloud & DevOps</button>
-                <button className={`tech-tab ${activeTab === 'ecommerce' ? 'active' : ''}`} onClick={() => setActiveTab('ecommerce')}>E-Commerce</button>
-            </div>
+          <div className="tech-tabs" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
+            <button className={`tech-tab ${activeTab === 'frontend' ? 'active' : ''}`} onClick={() => setActiveTab('frontend')}>Modern Frameworks</button>
+            <button className={`tech-tab ${activeTab === 'robust-programming' ? 'active' : ''}`} onClick={() => setActiveTab('robust-programming')}>Robust Programming</button>
+            <button className={`tech-tab ${activeTab === 'scalable-database' ? 'active' : ''}`} onClick={() => setActiveTab('scalable-database')}>Scalable Databases</button>
+            <button className={`tech-tab ${activeTab === 'backend-frameworks' ? 'active' : ''}`} onClick={() => setActiveTab('backend-frameworks')}>Backend Frameworks</button>
+            <button className={`tech-tab ${activeTab === 'cloud' ? 'active' : ''}`} onClick={() => setActiveTab('cloud')}>Cloud Platforms</button>
+            <button className={`tech-tab ${activeTab === 'ecommerce' ? 'active' : ''}`} onClick={() => setActiveTab('ecommerce')}>E-Commerce</button>
+            <button className={`tech-tab ${activeTab === 'project' ? 'active' : ''}`} onClick={() => setActiveTab('project')}>Project Management</button>
+            <button className={`tech-tab ${activeTab === 'devops' ? 'active' : ''}`} onClick={() => setActiveTab('devops')}>DevOps Tools</button>
+          </div>
 
-            <div className="tech-content-wrapper mil-mt-60">
-                {/* Frontend Content */}
-                {activeTab === 'frontend' && (
-                    <div className="tech-content active">
-                        <h2>Modern Frontend Development</h2>
-                        <p>We leverage React, Next.js, and Tailwind CSS for stunning interfaces.</p>
-                        <div className="tech-logos">
-                            <div className="logo-card"><i className="fab fa-react"></i><span>React</span></div>
-                            <div className="logo-card"><img src="https://assets.vercel.com/image/upload/front/assets/design/nextjs-black-logo.svg" alt="Next.js" style={{width: '40px'}} /><span>Next.js</span></div>
-                            <div className="logo-card"><span>Tailwind</span></div>
-                        </div>
-                    </div>
-                )}
-
-                {/* Backend Content */}
-                {activeTab === 'robust-programming' && (
-                    <div className="tech-content active">
-                        <h2>Robust Backend Engineering</h2>
-                        <p>Proficient in Python, Java, and Node.js for scalable backend stacks.</p>
-                        <div className="tech-logos">
-                            <div className="logo-card"><span>Python</span></div>
-                            <div className="logo-card"><span>Node.js</span></div>
-                            <div className="logo-card"><span>PHP</span></div>
-                        </div>
-                    </div>
-                )}
-
-                {/* Database Content */}
-                {activeTab === 'scalable-database' && (
-                    <div className="tech-content active">
-                        <h2>Secure Data Management</h2>
-                        <p>Working with MySQL, PostgreSQL, and MongoDB for secure data.</p>
-                        <div className="tech-logos">
-                            <div className="logo-card"><span>MySQL</span></div>
-                            <div className="logo-card"><span>Postgres</span></div>
-                            <div className="logo-card"><span>MongoDB</span></div>
-                        </div>
-                    </div>
-                )}
-
-                {/* Cloud Content */}
-                {activeTab === 'cloud' && (
-                    <div className="tech-content active">
-                        <h2>Cloud & DevOps</h2>
-                        <p>AWS, Azure, and Docker for automated deployments.</p>
-                        <div className="tech-logos">
-                            <div className="logo-card"><span>AWS</span></div>
-                            <div className="logo-card"><span>Azure</span></div>
-                            <div className="logo-card"><span>Docker</span></div>
-                        </div>
+          <div className="tech-content-wrapper mil-mt-60">
+            {activeTab === 'frontend' && (
+              <div className="tech-content active">
+                <h2>Modern Frontend Development</h2>
+                <p>We leverage React, Next.js, Tailwind CSS, and Bootstrap for high-performance user interfaces.</p>
+                <div className="tech-logos">
+                  <div className="logo-card"><span>React</span></div>
+                  <div className="logo-card"><span>Next.js</span></div>
+                  <div className="logo-card"><span>Tailwind</span></div>
                 </div>
-                )}
-
-                {/* E-Commerce Content */}
-                {activeTab === 'ecommerce' && (
-                    <div className="tech-content active">
-                        <h2>E-Commerce Solutions</h2>
-                        <p>High-performance Shopify, WooCommerce, and Magento stores.</p>
-                        <div className="tech-logos">
-                            <div className="logo-card"><span>Shopify</span></div>
-                            <div className="logo-card"><span>WooCommerce</span></div>
-                        </div>
-                    </div>
-                )}
-            </div>
+              </div>
+            )}
+            {activeTab === 'robust-programming' && (
+              <div className="tech-content active">
+                <h2>Robust Backend Engineering</h2>
+                <p>Proficient in Python, Java, TypeScript, and JavaScript for efficient technology stacks.</p>
+                <div className="tech-logos">
+                  <div className="logo-card"><span>Python</span></div>
+                  <div className="logo-card"><span>Java</span></div>
+                  <div className="logo-card"><span>PHP</span></div>
+                </div>
+              </div>
+            )}
+            {activeTab === 'scalable-database' && (
+              <div className="tech-content active">
+                <h2>Secure Data Management</h2>
+                <p>Ensuring your application data is stored securely with MySQL, PostgreSQL, and Oracle.</p>
+                <div className="tech-logos">
+                  <div className="logo-card"><span>MySQL</span></div>
+                  <div className="logo-card"><span>PostgreSQL</span></div>
+                  <div className="logo-card"><span>Oracle</span></div>
+                </div>
+              </div>
+            )}
+            {activeTab === 'backend-frameworks' && (
+              <div className="tech-content active">
+                <h2>Backend Frameworks</h2>
+                <p>Utilizing Django, Spring, and Node.js to accelerate development and stability.</p>
+              </div>
+            )}
+            {activeTab === 'cloud' && (
+              <div className="tech-content active">
+                <h2>Cloud Platforms</h2>
+                <p>Secure, high-availability applications on AWS, Microsoft Azure, and Google Cloud.</p>
+              </div>
+            )}
+            {activeTab === 'ecommerce' && (
+              <div className="tech-content active">
+                <h2>E-Commerce</h2>
+                <p>High-performance Shopify, WooCommerce, and Magento stores.</p>
+              </div>
+            )}
+            {activeTab === 'project' && (
+              <div className="tech-content active">
+                <h2>Project Management</h2>
+                <p>Collaboration and delivery using Jira and Trello.</p>
+              </div>
+            )}
+            {activeTab === 'devops' && (
+              <div className="tech-content active">
+                <h2>DevOps Tools</h2>
+                <p>Automated deployments using GitHub, Bitbucket, and Docker.</p>
+              </div>
+            )}
+          </div>
         </div>
       </section>
 
-      {/* Solutions Section - FIXED BACKGROUND */}
-      <section className="mil-dark-bg mil-p-120-90" style={{background: '#0a0b1e'}}>
+      {/* Solutions Section - FIXED VISIBILITY & BACKGROUND */}
+      <section className="mil-dark-bg mil-p-120-90" style={{ background: '#0a0b1e', position: 'relative', zIndex: 1 }}>
         <div className="container">
           <div className="mil-complex-text justify-content-center mil-mb-60">
             <h2 className="mil-h1 mil-muted mil-center">Our <span className="mil-thin">Solutions</span></h2>
           </div>
           
-          <div className="row mil-services-grid">
+          <div className="row mil-services-grid" style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
             {/* Card 1 */}
-            <div className="col-lg-4 col-md-6 mil-mb-30">
-              <div className="mil-service-card-sm mil-up">
+            <div className="col-lg-2-5 col-md-6">
+              <div className="mil-service-card-sm mil-up" style={{ background: 'rgba(255,255,255,0.05)', padding: '30px', borderRadius: '15px' }}>
                 <div className="ai-partner-logo mil-mb-30">
-                  <Image src="/img/solution/1.png" alt="NAAC ERP" width={80} height={80} />
+                  <Image src="/img/solution/1.png" alt="NAAC ERP" width={60} height={60} />
                 </div>
-                <p className="mil-light-soft">A NAAC-focused ERP for colleges, enabling effortless data entry and compliance reporting.</p>
+                <p className="mil-light-soft" style={{ color: '#fff' }}>A NAAC-focused ERP for colleges, enabling effortless documentation and reporting.</p>
               </div>
             </div>
 
             {/* Card 2 */}
-            <div className="col-lg-4 col-md-6 mil-mb-30">
-              <div className="mil-service-card-sm mil-up">
+            <div className="col-lg-2-5 col-md-6">
+              <div className="mil-service-card-sm mil-up" style={{ background: 'rgba(255,255,255,0.05)', padding: '30px', borderRadius: '15px' }}>
                 <div className="ai-partner-logo mil-mb-30">
-                  <Image src="/img/solution/2.png" alt="Attendance" width={80} height={80} />
+                  <Image src="/img/solution/2.png" alt="Attendance" width={60} height={60} />
                 </div>
-                <p className="mil-light-soft">A hybrid mobile app for tracking student attendance class-wise with FYUG support.</p>
+                <p className="mil-light-soft" style={{ color: '#fff' }}>A hybrid mobile app for tracking student attendance class-wise with FYUG support.</p>
               </div>
             </div>
 
             {/* Card 3 */}
-            <div className="col-lg-4 col-md-6 mil-mb-30">
-              <div className="mil-service-card-sm mil-up">
+            <div className="col-lg-2-5 col-md-6">
+              <div className="mil-service-card-sm mil-up" style={{ background: 'rgba(255,255,255,0.05)', padding: '30px', borderRadius: '15px' }}>
                 <div className="ai-partner-logo mil-mb-30">
-                  <Image src="/img/solution/3.png" alt="Fee Collection" width={80} height={80} />
+                  <Image src="/img/solution/3.png" alt="Fee" width={60} height={60} />
                 </div>
-                <p className="mil-light-soft">Secure fee collection platform for schools offering online payments and receipts.</p>
+                <p className="mil-light-soft" style={{ color: '#fff' }}>Secure fee collection platform for schools offering online payments and receipts.</p>
               </div>
             </div>
 
             {/* Card 4 */}
-            <div className="col-lg-4 col-md-6 mil-mb-30">
-              <div className="mil-service-card-sm mil-up">
+            <div className="col-lg-2-5 col-md-6">
+              <div className="mil-service-card-sm mil-up" style={{ background: 'rgba(255,255,255,0.05)', padding: '30px', borderRadius: '15px' }}>
                 <div className="ai-partner-logo mil-mb-30">
-                  <Image src="/img/solution/4.png" alt="Logistics" width={80} height={80} />
+                  <Image src="/img/solution/4.png" alt="Logistics" width={60} height={60} />
                 </div>
-                <p className="mil-light-soft">Web app for logistics companies to track consignments in real time with ease.</p>
+                <p className="mil-light-soft" style={{ color: '#fff' }}>Web app for logistics companies to track consignments in real time with ease.</p>
               </div>
             </div>
 
             {/* Card 5 */}
-            <div className="col-lg-4 col-md-6 mil-mb-30">
-              <div className="mil-service-card-sm mil-up">
+            <div className="col-lg-2-5 col-md-6">
+              <div className="mil-service-card-sm mil-up" style={{ background: 'rgba(255,255,255,0.05)', padding: '30px', borderRadius: '15px' }}>
                 <div className="ai-partner-logo mil-mb-30">
-                  <Image src="/img/solution/5.png" alt="Temple" width={80} height={80} />
+                  <Image src="/img/solution/5.png" alt="Temple" width={60} height={60} />
                 </div>
-                <p className="mil-light-soft">Web app for temples enabling devotees to book offerings online with secure payments.</p>
+                <p className="mil-light-soft" style={{ color: '#fff' }}>Web app for temples enabling devotees to book offerings online with secure payments.</p>
               </div>
             </div>
           </div>
