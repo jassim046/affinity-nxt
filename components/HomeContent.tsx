@@ -6,7 +6,7 @@ import { Autoplay } from 'swiper/modules'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
-
+d
 export default function HomeContent() {
   const [activeTab, setActiveTab] = useState('frontend');
 
