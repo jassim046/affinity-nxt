@@ -1,0 +1,195 @@
+.container1 {
+	width:490px;
+	z-index:5000;
+	float:left;
+	
+	}
+	
+/* Positions the contact form so it doesn't interfere with any other content, as well as a z-index above any other elements on the page */	
+#contactFormContainer {
+	position:absolute;
+	left:620px;
+	z-index:4001;
+	
+	}
+	
+/* Hides the whole contact form until needed */	
+#contactForm {
+	height:500px;width:558px;
+	background:url(../images/cloth_alike.png);
+	background-repeat:repeat;
+	border:1px solid #929191;
+	padding:7px 12px; 
+	color:#fff;
+	display:none;
+	padding-bottom:20px;
+	}   
+
+/* Loading bar that will appear while the ajax magic is happening */
+.bar{
+	display:none; 
+	background:url(../images/ajax-loader.gif) no-repeat center; 
+	margin-top:100px; 
+	height:40px; width:230px;
+	}
+	
+/* Hides the confirmation message until needed */	
+#messageSent {display:none;}
+
+/* This hides the form validation alert messages until needed */
+#contactForm span { 
+	display:none; 
+	font-size:9px; 
+	line-height:10px; 
+	padding-left:6px; 
+	color:#f5c478;
+	}
+	
+/* Some styling for the contact button */
+#contactFormContainer .contact {
+	height:47px; width:211px;
+	background:url(../images/contact_me.png); 
+	position:absolute; 
+	left:368px; bottom:-46px; 
+	cursor:pointer;
+	}
+			
+/* Hides the darkening layer for the Modal effect. The z-index is necessary for layering purposes, and be sure to keep the positioning/height/width the same */	
+#backgroundPopup{
+	display:none; 
+	position:fixed; 
+	_position:absolute; 
+	height:100%; width:100%; 
+	top:0; left:0;
+	background:#000; 
+	z-index:4000;
+	}  
+	
+/* Form styling from here on out. There is nothing in here that you HAVE to use to get this to work */	
+/*#contactForm textarea, #contactForm input {
+	width:180px; 
+	background:#6d6d6d url(../images/contact_input.png) repeat-x top; 
+	color:#fff; 
+	border:1px solid #8a8a8a; 
+	height:15px; 
+	line-height:14px; 
+	font-size:11px; 
+	padding:2px 2px 0px;
+	}
+#contactForm input {background-position:0px -20px;}
+#contactForm textarea {height:114px; font-family:Verdana, Geneva, sans-serif;}
+#contactForm .submit {
+	border:1px solid #aba8a8; 
+	background:#e5e5e5; 
+	text-transform:uppercase; 
+	color:#4d4d4d; 
+	font-weight:bold; 
+	padding:7px 16px 7px 14px; 
+	height:37px; width:124px; 
+	cursor:pointer; 
+	float:left; 
+	margin-top:196px;
+	}
+#contactForm .submit:active {background:#cacaca; }
+#contactForm label {padding-left:4px; font-weight:bold;}
+#contactForm p {padding-bottom:8px;}
+#contactForm .input_boxes {float:left; width:204px;}*/
+
+#dummycontent { position:relative;}
+.bottomlink {position:absolute; bottom:0;}
+#formdiv
+{
+	width:500px;
+	overflow:hidden;
+	margin-left:10px;
+}
+#insdiv
+{
+	width:500px;
+	overflow:hidden;
+}
+.title
+{
+	width:250px;
+	float:left;
+	color:#666666;
+	clear:left;
+	font-weight:600;
+	margin-top:22px;
+	font-size:15px;
+	font-family: 'PT Serif', serif;
+	
+}
+.field
+{
+	width:250px;
+	float:right;
+	clear:right;
+	margin-top:20px;
+	font-family: 'PT Serif', serif;
+	color:#000000;
+}
+.box1
+{
+	width:249px;
+	height:25px;
+	background-color:#FFFFFF;
+	border:solid 1px #CCCCCC;
+	border-radius: 5px;
+	mz-border-radius: 5px;
+}
+.bigbx
+{
+	width:249px;
+	height:55px;
+	border:solid 1px #CCCCCC;
+	border-radius: 5px;
+	mz-border-radius: 5px;
+}
+.sumit
+{
+	width:90px;
+	height:30px;
+	float:left;
+	margin-top:20px;
+	margin-left:10px;
+	background-color:#333333;
+	border:solid 1px #CCCCCC;
+	border-radius: 5px;
+	mz-border-radius: 5px;
+	border:none;
+	color:#FFFFFF;
+	font-family: 'PT Serif', serif;
+	font-size:14px;
+
+}
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+.global-whatsapp-sticky {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
