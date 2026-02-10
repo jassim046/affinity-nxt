@@ -22,26 +22,13 @@ export default function HomeContent() {
 
       counters.forEach(c => observer.observe(c))
 
-      function startCounter(el: HTMLElement) {
-        if ((el as any)._done) return
-        const target = parseInt(el.dataset.target || '0', 10)
-        const suffix = el.dataset.suffix || ""
-        const duration = 1400
-        const start = 0
-        let startTime: number | null = null
-
-        function step(timestamp: number) {
-          if (!startTime) startTime = timestamp
-          const progress = Math.min((timestamp - startTime!) / duration, 1)
-          const eased = 1 - Math.pow(1 - progress, 3)
-          el.innerText = Math.floor(eased * (target - start) + start) + suffix
-          if (progress < 1) requestAnimationFrame(step)
-          else el.innerText = target + suffix
-        }
-        requestAnimationFrame(step)
-        ;(el as any)._done = true
-      }
-    }
+    // Change 'function startCounter(el: HTMLElement)' to this:
+const startCounter = (el: HTMLElement) => {
+  if ((el as any)._done) return;
+  const target = parseInt(el.dataset.target || '0', 10);
+  const suffix = el.dataset.suffix || "";
+  // ... the rest of your counter code stays the same
+};
 
     // Tech tabs
     document.querySelectorAll('.tech-tab').forEach(tab => {
