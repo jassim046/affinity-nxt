@@ -95,7 +95,7 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Technologies Section - ALL 8 TABS RESTORED */}
+    {/* Technologies Section - ALL 8 TABS RESTORED */}
       <section className="tech-section mil-p-120-90">
         <div className="container">
           <div className="tech-tabs" style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
