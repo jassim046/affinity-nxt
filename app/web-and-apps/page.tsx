@@ -116,11 +116,14 @@ export default function WebAndAppsPage() {
       : partners.filter(partner => partner.category === activeCategory)
   }, [activeCategory])
 
-  const handleTabClick = useCallback((e) => {
-    const btn = e.target.closest('.tab-btn')
-    if (!btn) return
-    setActiveCategory(btn.dataset.category)
-  }, [])
+ const handleTabClick = useCallback((e: React.MouseEvent<HTMLElement>) => {
+  const target = e.target as HTMLElement;
+  const btn = target.closest('.tab-btn') as HTMLElement;
+  
+  if (!btn || !btn.dataset.category) return;
+  
+  setActiveCategory(btn.dataset.category);
+}, []); // Ensure the empty array [] is here if it was there before
 
   if (!mounted) {
     return (
