@@ -31,12 +31,14 @@ export default function BrandingPage() {
     ? brands 
     : brands.filter(b => b.category === activeCategory)
 
-  const handleTabClick = (e) => {
-    const btn = e.target.closest('.tab-btn')
-    if (!btn) return
-    setActiveCategory(btn.dataset.category)
-  }
-
+  const handleTabClick = (e: React.MouseEvent<HTMLElement>) => {
+  const target = e.target as HTMLElement;
+  const btn = target.closest('.tab-btn') as HTMLElement;
+  
+  if (!btn || !btn.dataset.category) return;
+  
+  setActiveCategory(btn.dataset.category);
+};
   if (!mounted) {
     return (
       <PageLayout>
