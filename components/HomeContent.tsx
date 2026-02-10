@@ -208,54 +208,177 @@ export default function HomeContent() {
         </div>
       </section>
 
+     
       {/* Technologies Section */}
       <section className="tech-section">
         <div className="tech-tabs">
           <button className="tech-tab active" data-tab="frontend">Modern Frameworks</button>
-          <button className="tech-tab" data-tab="backend">Programming</button>
-          <button className="tech-tab" data-tab="database">Databases</button>
-          <button className="tech-tab" data-tab="cloud">Cloud & DevOps</button>
+          <button className="tech-tab" data-tab="robust-programming">Robust Programming Languages</button>
+          <button className="tech-tab" data-tab="scalable-database">Scalable Databases</button>
+          <button className="tech-tab" data-tab="backend-frameworks">Backend Frameworks</button>
+          <button className="tech-tab" data-tab="cloud">Cloud Platforms</button>
+          <button className="tech-tab" data-tab="ecommerce">E-Commerce</button>
+          <button className="tech-tab" data-tab="project">Project management</button>
+          <button className="tech-tab" data-tab="devops">DevOps Tools</button>
         </div>
 
         <div className="tech-content-wrapper">
           <div className="tech-content active" data-tab="frontend">
             <h2>Modern Frontend Development</h2>
-            <p>We leverage cutting-edge frameworks like React and Next.js for high-performance interfaces.</p>
+            <p>We leverage cutting-edge frontend technologies such as React, Next.js, Tailwind CSS, and Bootstrap to craft high-performance, responsive, and visually stunning user interfaces that deliver exceptional user experiences.</p>
             <div className="tech-logos">
-              <div className="logo-card"><span>React</span></div>
-              <div className="logo-card"><span>Next.js</span></div>
-              <div className="logo-card"><span>Angular</span></div>
-              <div className="logo-card"><span>Tailwind</span></div>
+              <div className="logo-card">
+                <i className="fa-brands fa-react"></i>
+                <span>React</span>
+              </div>
+              <div className="logo-card">
+                <img src="https://assets.vercel.com/image/upload/front/assets/design/nextjs-black-logo.svg" alt="Next.js" className="tech-logo" style={{width: '50px', height: '50px'}} />
+                <span>Next.js</span>
+              </div>
+              <div className="logo-card angular-icon">
+                <i className="fa-brands fa-angular"></i>
+                <span>Angular</span>
+              </div>
+              <div className="logo-card">
+                <i className="fa-brands fa-vuejs"></i>
+                <span>Vue.js</span>
+              </div>
+              <div className="logo-card tailwind-icon">
+                <span className="text-icon">TW</span>
+                <span>Tailwind</span>
+              </div>
             </div>
           </div>
 
-          <div className="tech-content" data-tab="backend">
+          <div className="tech-content" data-tab="robust-programming">
             <h2>Robust Backend Engineering</h2>
-            <p>Reliable server-side solutions using Python, PHP, and Node.js.</p>
+            <p>Our development team is proficient in industry-leading programming languages including Python, Java, TypeScript, and JavaScript, enabling us to select the most efficient and scalable technology stack tailored to your project&apos;s needs.</p>
             <div className="tech-logos">
-              <div className="logo-card"><span>Python</span></div>
-              <div className="logo-card"><span>PHP</span></div>
-              <div className="logo-card"><span>Node.js</span></div>
+              <div className="logo-card php-icon">
+                <i className="fa-brands fa-php"></i>
+                <span>PHP</span>
+              </div>
+              <div className="logo-card python-icon">
+                <i className="fa-brands fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div className="logo-card js-icon">
+                <i className="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+              </div>
             </div>
           </div>
 
-          <div className="tech-content" data-tab="database">
-            <h2>Secure Data Management</h2>
-            <p>Scaling your data with MySQL, PostgreSQL, and MongoDB.</p>
+          <div className="tech-content" data-tab="scalable-database">
+            <h2>Secure & Scalable Data Management</h2>
+            <p>We work with powerful database systems like MySQL, PostgreSQL, and Oracle to ensure your application&apos;s data is stored securely, managed efficiently, and scaled seamlessly as your business grows.</p>
             <div className="tech-logos">
-              <div className="logo-card"><span>MySQL</span></div>
-              <div className="logo-card"><span>Postgres</span></div>
-              <div className="logo-card"><span>MongoDB</span></div>
+              <div className="logo-card mysql-icon">
+                <i className="fa-solid fa-database"></i>
+                <span>MySQL</span>
+              </div>
+              <div className="logo-card mongo-icon">
+                <i className="fa-brands fa-envira"></i>
+                <span>MongoDB</span>
+              </div>
+              <div className="logo-card firebase-icon">
+                <i className="fa-solid fa-fire"></i>
+                <span>Firebase</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="tech-content" data-tab="backend-frameworks">
+            <h2>Backend Frameworks & Architecture</h2>
+            <p>We utilize powerful backend frameworks such as Django, Spring, and Node.js to accelerate development, minimize errors, and deliver stable, high-performance server-side solutions through proven, pre-built functionalities.</p>
+            <div className="tech-logos">
+              <div className="logo-card laravel-icon">
+                <i className="fa-brands fa-laravel"></i>
+                <span>Laravel</span>
+              </div>
+              <div className="logo-card django-icon">
+                <img src="https://static.djangoproject.com/img/logos/django-logo-negative.svg" alt="Django" style={{width: '50px', height: '50px'}} />
+                <span>Django</span>
+              </div>
+              <div className="logo-card node-icon">
+                <i className="fa-brands fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="tech-content" data-tab="ecommerce">
+            <h2>E commerce</h2>
+            <p>We design and develop high-performance e-commerce platforms that deliver seamless shopping experiences, secure transactions, and scalable growth. From custom storefronts to advanced integrations, our solutions help businesses convert visitors into loyal customers.</p>
+            <div className="tech-logos">
+              <div className="logo-card">
+                <svg className="woo-logo" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" aria-label="WooCommerce" style={{width: '50px', height: '50px'}}>
+                  <path fill="currentColor" d="M461.3 128H50.7C22.7 128 0 150.7 0 178.7v154.7C0 361.3 22.7 384 50.7 384h410.7c28 0 50.7-22.7 50.7-50.7V178.7c-.1-28-22.8-50.7-50.8-50.7z"/>
+                  <text x="256" y="300" textAnchor="middle" fontSize="160" fill="#fff" fontFamily="Arial, Helvetica, sans-serif">Woo</text>
+                </svg>
+                <span>WooCommerce</span>
+              </div>
+              <div className="logo-card shopify-icon">
+                <i className="fa-brands fa-shopify"></i>
+                <span>Shopify</span>
+              </div>
+              <div className="logo-card magento-icon">
+                <i className="fa-brands fa-magento"></i>
+                <span>Magento</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="tech-content" data-tab="project">
+            <h2>Project Management</h2>
+            <p>We implement structured, technology-driven project management systems that improve collaboration, visibility, and delivery timelines. Our approach ensures projects stay on track, within scope, and aligned with business goals from planning to execution.</p>
+            <div className="tech-logos">
+              <div className="logo-card jira-icon">
+                <i className="fa-brands fa-jira"></i>
+                <span>Jira</span>
+              </div>
+              <div className="logo-card trello-icon">
+                <i className="fa-brands fa-trello"></i>
+                <span>Trello</span>
+              </div>
             </div>
           </div>
 
           <div className="tech-content" data-tab="cloud">
-            <h2>DevOps & Deployment</h2>
-            <p>Cloud infrastructure on AWS, Azure, and Google Cloud.</p>
+            <h2>Cloud-Driven Scalability</h2>
+            <p>We harness leading cloud platforms including AWS, Microsoft Azure, and Google Cloud to build secure, scalable, and high-availability applications that perform flawlessly under any workload.</p>
             <div className="tech-logos">
-              <div className="logo-card"><span>AWS</span></div>
-              <div className="logo-card"><span>Azure</span></div>
-              <div className="logo-card"><span>Docker</span></div>
+              <div className="logo-card aws-icon">
+                <i className="fa-brands fa-aws"></i>
+                <span>AWS</span>
+              </div>
+              <div className="logo-card azure-icon">
+                <i className="fa-brands fa-microsoft"></i>
+                <span>Microsoft Azure</span>
+              </div>
+              <div className="logo-card cloud-icon">
+                <i className="fa-solid fa-cloud"></i>
+                <span>Cloud Services</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="tech-content" data-tab="devops">
+            <h2>DevOps & Deployment Excellence</h2>
+            <p>Our DevOps practices leverage advanced tools like Docker and Kubernetes to automate deployments, optimize infrastructure management, and ensure consistent application reliability across environments.</p>
+            <div className="tech-logos">
+              <div className="logo-card github-icon">
+                <i className="fa-brands fa-github"></i>
+                <span>GitHub</span>
+              </div>
+              <div className="logo-card bitbucket-icon">
+                <i className="fa-brands fa-bitbucket"></i>
+                <span>Bitbucket</span>
+              </div>
+              <div className="logo-card azure-repos-icon">
+                <i className="fa-solid fa-code-branch"></i>
+                <span>Azure Repos</span>
+              </div>
             </div>
           </div>
         </div>
