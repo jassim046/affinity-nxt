@@ -1,6 +1,4 @@
-'use client';
-
-import React from 'react'; // or whatever your next line is...
+'use client'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -255,20 +253,106 @@ export default function HomeContent() {
       </section>
 
       {/* Solutions Section */}
+      {/* Clients + Services Section (REPLACE with this block) */}
+  <section className="ai-clients-services-section">
+    <div className="content-section">
+      {/* What Sets Us Apart */}
       <section className="mil-dark-bg">
-        <div className="container mil-p-80-0">
-          <h2 className="mil-h1 mil-muted mil-center mil-mb-60">Our <span className="mil-thin">Solutions</span></h2>
-          <div className="row mil-services-grid">
-            <div className="col-md-4 mil-mb-30">
-              <div className="mil-service-card-sm">
-                <Image src="/img/solution/1.png" alt="Solution" width={100} height={100} className="mil-mb-30" />
-                <p className="mil-light-soft">NAAC-focused ERP for colleges, enabling effortless data entry and compliance-ready reporting.</p>
+        <div className="mi-invert-fix">
+          <div className="mil-animation-frame">
+            <div
+              className="mil-animation mil-position-1 mil-scale"
+              data-value-1="2.4"
+              data-value-2="1.4"
+              style={{ top: 300, right: "-100px" }}
+            />
+            <div
+              className="mil-animation mil-position-2 mil-scale"
+              data-value-1={2}
+              data-value-2={1}
+              style={{ left: 150 }}
+            />
+          </div>
+          <div className="container mil-p-80-0">
+            <div className="mil-mb-30">
+              <div className="mil-complex-text justify-content-center">
+                <h2 className="mil-h1 mil-muted mil-center">
+                  Our <span className="mil-thin">Solutions</span>
+                </h2>
               </div>
             </div>
-            {/* Add more solution cards as needed */}
+            <div className="row mil-services-grid m-0 ">
+              <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+                <div className="mil-service-card-sm mil-up">
+                  <div className="ai-partner-logo mil-mb-30">
+                    <img src="img/solution/1.png" alt="" />
+                  </div>
+                  <p className="mil-light-soft mil-mb-30">
+                    A NAAC-focused ERP for colleges, enabling effortless data
+                    entry, streamlined documentation, and compliance-ready
+                    reporting for accreditation and re-accreditation.
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+                <div className="mil-service-card-sm mil-up">
+                  <div
+                    className="ai-partner-logo mil-mb-30"
+                    style={{ height: "60px !important" }}
+                  >
+                    <img src="img/solution/2.png" alt="" />
+                  </div>
+                  <p className="mil-light-soft mil-mb-30">
+                    A hybrid mobile app for colleges to record, track, and
+                    report student attendance class-wise and hour-wise, with
+                    FYUG support and consolidated reporting.
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+                <div className="mil-service-card-sm mil-up">
+                  <div className="ai-partner-logosolution mil-mb-30">
+                    <img src="img/solution/3.png" alt="" />
+                  </div>
+                  <p className="mil-light-soft mil-mb-30">
+                    A simple, secure fee collection platform for schools and
+                    colleges, offering online payments, automated receipts, and
+                    real-time reporting.
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+                <div className="mil-service-card-sm mil-up">
+                  <div className="ai-partner-logo mil-mb-30">
+                    <img src="img/solution/4.png" alt="" />
+                  </div>
+                  <p className="mil-light-soft mil-mb-30">
+                    A web app for logistics companies that lets customers track
+                    consignments in real time with ease, improving transparency
+                    and customer trust.
+                  </p>
+                </div>
+              </div>
+              <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+                <div className="mil-service-card-sm mil-up">
+                  <div className="ai-partner-logo mil-mb-30">
+                    <img src="img/solution/5.png" alt="" />
+                  </div>
+                  <p className="mil-light-soft mil-mb-30">
+                    A web app for temples that enables devotees to book
+                    offerings online with secure payments, multi-deity support,
+                    and user-friendly profiles.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+      {/* services end
+       */}
+    </div>
+  </section>
 
       {/* Empower Section */}
       <section id="industries">
