@@ -776,7 +776,7 @@ backgrounds
   height: 100%;
   position: absolute;
   pointer-events: none;
-  z-index: 0 !important;
+  z-index: 2;
   -webkit-backdrop-filter: invert(100%);
           backdrop-filter: invert(100%);
 }
