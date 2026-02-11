@@ -1,4 +1,4 @@
-g'use client'
+'use client'
 import 'swiper/css'
 import 'swiper/css/autoplay'
 import { Swiper, SwiperSlide } from 'swiper/react'
