@@ -396,7 +396,7 @@ export default function HomeContent() {
   ];
 
   return (
-    <section className="">
+    <section className="mil-dark-bg">
       <div className="container mil-p-80-0">
         <div className="mil-complex-text justify-content-center mil-mb-60">
           <h2 className="mil-h1 mil-muted mil-center">
