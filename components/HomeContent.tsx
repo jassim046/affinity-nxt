@@ -385,55 +385,42 @@ export default function HomeContent() {
       </section>
 
       {/* Solutions Section */}
-      <section className="mil-dark-bg">
-        <div className="container mil-p-80-0">
-          <div className="mil-complex-text justify-content-center mil-mb-60">
-            <h2 className="mil-h1 mil-muted mil-center">Our <span className="mil-thin">Solutions</span></h2>
-          </div>
-          <div className="row mil-services-grid m-0">
-            <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
-              <div className="mil-service-card-sm mil-up">
-                <div className="ai-partner-logo mil-mb-30">
-                  <img src="/img/solution/1.png" alt="NAAC ERP" />
-                </div>
-                <p className="mil-light-soft mil-mb-30">A NAAC-focused ERP for colleges, enabling effortless documentation and reporting.</p>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
-              <div className="mil-service-card-sm mil-up">
-                <div className="ai-partner-logo mil-mb-30">
-                  <img src="/img/solution/2.png" alt="Attendance" />
-                </div>
-                <p className="mil-light-soft mil-mb-30">Hybrid mobile app for tracking student attendance with FYUG support.</p>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
-              <div className="mil-service-card-sm mil-up">
-                <div className="ai-partner-logo mil-mb-30">
-                  <img src="/img/solution/3.png" alt="Fee Collection" />
-                </div>
-                <p className="mil-light-soft mil-mb-30">Secure fee collection platform for schools with real-time reporting.</p>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
-              <div className="mil-service-card-sm mil-up">
-                <div className="ai-partner-logo mil-mb-30">
-                  <img src="/img/solution/4.png" alt="Logistics" />
-                </div>
-                <p className="mil-light-soft mil-mb-30">Web app for tracking consignments in real-time for logistics companies.</p>
-              </div>
-            </div>
-            <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
-              <div className="mil-service-card-sm mil-up">
-                <div className="ai-partner-logo mil-mb-30">
-                  <img src="/img/solution/5.png" alt="Temple" />
-                </div>
-                <p className="mil-light-soft mil-mb-30">Online booking platform for temples with secure payment gateways.</p>
-              </div>
-            </div>
-          </div>
+     const SolutionsSection = () => {
+  const solutions = [
+    { img: "/img/solution/1.png", alt: "NAAC ERP", desc: "A NAAC-focused ERP for colleges, enabling effortless documentation and reporting." },
+    { img: "/img/solution/2.png", alt: "Attendance", desc: "Hybrid mobile app for tracking student attendance with FYUG support." },
+    { img: "/img/solution/3.png", alt: "Fee Collection", desc: "Secure fee collection platform for schools with real-time reporting." },
+    { img: "/img/solution/4.png", alt: "Logistics", desc: "Web app for tracking consignments in real-time for logistics companies." },
+    { img: "/img/solution/5.png", alt: "Temple", desc: "Online booking platform for temples with secure payment gateways." },
+  ];
+
+  return (
+    <section className="mil-dark-bg">
+      <div className="container mil-p-80-0">
+        <div className="mil-complex-text justify-content-center mil-mb-60">
+          <h2 className="mil-h1 mil-muted mil-center">
+            Our <span className="mil-thin">Solutions</span>
+          </h2>
         </div>
-      </section>
+        <div className="row mil-services-grid m-0">
+          {solutions.map((item, index) => (
+            <div key={index} className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+              <div 
+                className="mil-service-card-sm mil-up" 
+                style={{ opacity: 1, transform: 'translate(0px, 0px)' }}
+              >
+                <div className="ai-partner-logo mil-mb-30">
+                  <img src={item.img} alt={item.alt} />
+                </div>
+                <p className="mil-light-soft mil-mb-30">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
 
       {/* Empower Section */}
       <section id="industries">
