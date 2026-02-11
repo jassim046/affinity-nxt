@@ -385,6 +385,7 @@ export default function HomeContent() {
       </section>
 
       {/* Solutions Section */}
+      import React from 'react';
      const SolutionsSection = () => {
   const solutions = [
     { img: "/img/solution/1.png", alt: "NAAC ERP", desc: "A NAAC-focused ERP for colleges, enabling effortless documentation and reporting." },
