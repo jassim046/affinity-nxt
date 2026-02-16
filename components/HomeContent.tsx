@@ -80,74 +80,172 @@ export default function HomeContent() {
     <>
       {/* Banner */}
       <section className="mil-banner mil-dark-bg">
-        <div className="mi-invert-fix" style={{background: '#002147'}}>
-          <div className="mil-gradient"></div>
-          <div className="mil-animation-frame">
-            <div className="mil-animation mil-position-1 mil-scale" data-value-1="7" data-value-2="1.6"></div>
-            <div className="mil-animation mil-position-2 mil-scale" data-value-1="4" data-value-2="1"></div>
-            <div className="mil-animation mil-position-3 mil-scale" data-value-1="1.2" data-value-2=".1">
-              <div className="mil-dodecahedron">
-                {Array.from({ length: 12 }).map((_, i) => (
-                  <div className="mil-pentagon" key={i}>
-                    {Array.from({ length: 5 }).map((_, j) => (
-                      <div key={j}></div>
-                    ))}
-                  </div>
-                ))}
-              </div>
+  <div className="mi-invert-fix" style={{ background: '#002147' }}>
+
+    {/* Gradient */}
+    <div className="mil-gradient"></div>
+
+    {/* Animations */}
+    <div className="mil-animation-frame">
+      <div
+        className="mil-animation mil-position-1 mil-scale"
+        data-value-1="7"
+        data-value-2="1.6"
+      ></div>
+
+      <div
+        className="mil-animation mil-position-2 mil-scale"
+        data-value-1="4"
+        data-value-2="1"
+      ></div>
+
+      <div
+        className="mil-animation mil-position-3 mil-scale"
+        data-value-1="1.2"
+        data-value-2=".1"
+      >
+        <div className="mil-dodecahedron">
+          {Array.from({ length: 12 }).map((_, i) => (
+            <div className="mil-pentagon" key={i}>
+              {Array.from({ length: 5 }).map((_, j) => (
+                <div key={j}></div>
+              ))}
             </div>
-          </div>
-          <div className="container">
-            <div className="mil-banner-content mil-up">
-              <div className="row">
-                <div className="col-md-7 col-lg-6">
-                  <h2 className="mil-muted" style={{fontSize: '40px'}}>
-                    Empowering <br />
-                    <span className="mil-thin">Digital Transformation</span><br />
-                    <span className="mil-thin">Since 2004</span>
-                  </h2>
-                  <br />
-                  <p className="mil-light-soft mil-mb-30">
-                    For over two decades, Affinity Interactive has been the catalyst behind successful digital journeys for businesses across the globe. We don&apos;t just build websites and applications — we craft comprehensive digital ecosystems that drive growth, enhance efficiency, and create lasting competitive advantages.
-                  </p>
-                </div>
-                <div className="col-md-5 col-lg-6 desktop-only">
-                  <div className="unique-stats-wrapper">
-                    <div className="unique-stats-box">
-                      <div className="unique-stats-grid">
-                        <div className="unique-stat-card">
-                          <span className="unique-stat-number counter" data-target="21" data-suffix="+">0</span>
-                          <span className="unique-stat-label">Years of Excellence</span>
-                        </div>
-                        <div className="unique-stat-card">
-                          <span className="unique-stat-number counter" data-target="300" data-suffix="+">0</span>
-                          <span className="unique-stat-label">Clients</span>
-                        </div>
-                        <div className="unique-stat-card">
-                          <span className="unique-stat-number counter" data-target="400" data-suffix="+">0</span>
-                          <span className="unique-stat-label">Projects</span>
-                        </div>
-                        <div className="unique-stat-card">
-                          <span className="unique-stat-number counter" data-target="15" data-suffix="+">0</span>
-                          <span className="unique-stat-label">Nations</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="mil-banner-buttons mil-mt-30">
-                <Link href="/service" className="mil-button mil-arrow-place mil-btn-space" style={{color: '#fff', marginRight: '20px'}}>
-                  <span>What we do</span>
-                </Link>
-                <Link href="/web-and-apps" className="mil-link mil-muted mil-arrow-place" style={{color: '#fff'}}>
-                  <span>View works</span>
-                </Link>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
+      </div>
+    </div>
+
+    {/* Content */}
+    <div className="container">
+      <div className="mil-banner-content mil-up">
+        <div className="row">
+
+          {/* Text */}
+          <div className="col-md-7 col-lg-6">
+            <h2 className="mil-muted" style={{ fontSize: '40px' }}>
+              Empowering <br />
+              <span className="mil-thin">Digital Transformation</span><br />
+              <span className="mil-thin">Since 2004</span>
+            </h2>
+
+            <br />
+
+            <p className="mil-light-soft mil-mb-30">
+              For over two decades, Affinity Interactive has been the catalyst behind successful digital journeys for businesses across the globe. We don&apos;t just build websites and applications — we craft comprehensive digital ecosystems that drive growth, enhance efficiency, and create lasting competitive advantages.
+            </p>
+          </div>
+
+          {/* Stats */}
+          <div className="col-md-5 col-lg-6 desktop-only">
+            <div className="unique-stats-wrapper">
+              <div className="unique-stats-box">
+                <div className="unique-stats-grid">
+                  <div className="unique-stat-card">
+                    <span className="unique-stat-number counter" data-target="21" data-suffix="+">0</span>
+                    <span className="unique-stat-label">Years of Excellence</span>
+                  </div>
+                  <div className="unique-stat-card">
+                    <span className="unique-stat-number counter" data-target="300" data-suffix="+">0</span>
+                    <span className="unique-stat-label">Clients</span>
+                  </div>
+                  <div className="unique-stat-card">
+                    <span className="unique-stat-number counter" data-target="400" data-suffix="+">0</span>
+                    <span className="unique-stat-label">Projects</span>
+                  </div>
+                  <div className="unique-stat-card">
+                    <span className="unique-stat-number counter" data-target="15" data-suffix="+">0</span>
+                    <span className="unique-stat-label">Nations</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Buttons */}
+        <div className="mil-banner-buttons mil-mt-30">
+          <Link
+            href="/service"
+            className="mil-button mil-arrow-place mil-btn-space"
+            style={{ color: '#fff' }}
+          >
+            <span>What we do</span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              <path d="M13 6L19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Link>
+
+          <Link
+            href="/web-and-apps"
+            className="mil-link mil-muted mil-arrow-place"
+            style={{ color: '#fff' }}
+          >
+            <span>View works</span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              <path d="M13 6L19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </Link>
+        </div>
+
+        {/* Scroll */}
+        <div className="mil-circle-text">
+          <svg
+            className="mil-ct-svg mil-rotate"
+            viewBox="0 0 300 300"
+            data-value="360"
+          >
+            <defs>
+              <path id="circlePath" d="M 150,150 m -60,0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0" />
+            </defs>
+            <g>
+              <text style={{ letterSpacing: '6.5px' }}>
+                <textPath xlinkHref="#circlePath">
+                  Scroll down - Scroll down -
+                </textPath>
+              </text>
+            </g>
+          </svg>
+
+          <a
+            href="#industries"
+            className="mil-button mil-arrow-place mil-icon-button mil-arrow-down"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              <path d="M13 6L19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
      {/* About Section */}
                  {/* About Section */}
