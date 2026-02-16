@@ -928,7 +928,7 @@ export default function HomeContent() {
               <div className="ai-partners-grid">
                 {clientLogos.map((logo, index) => (
                   <div key={index} className="ai-partner-item">
-                    <div className="ai-partner-card">
+                    <div className="ai-partner-card mil-border">
                       <div className="ai-partner-logo">
                         <Image
                           src={`/img/partners/${logo}`}
@@ -959,6 +959,7 @@ export default function HomeContent() {
     </div>
   </div>
 </section>
+
 
     </>
   )
