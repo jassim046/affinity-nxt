@@ -149,34 +149,48 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about">
-        <div className="container mil-p-60-30">
-          <div className="row justify-content-between align-items-center">
-            <div className="col-lg-5 col-xl-4">
-              <div className="mil-mb-90">
-                <h2 className="mil-up mil-mb-30" style={{fontSize: '35px'}}>
-                  Get Ready for Tomorrow with our <span className="mil-thin"><br />AI Automation <br />Services</span>
-                </h2>
-              </div>
+     {/* About Section */}
+<section id="about">
+  <div className="container mil-p-60-30">
+    <div className="row justify-content-between align-items-center">
+      <div className="col-lg-5 col-xl-4">
+        <div className="mil-mb-90">
+          <h2 className="mil-up mil-mb-30" style={{ fontSize: '35px' }}>
+            Get Ready for Tomorrow with our{' '}
+            <span className="mil-thin">
+              <br />AI Automation <br />Services
+            </span>
+          </h2>
+        </div>
+      </div>
+
+      <div className="col-lg-7">
+        <div className="mil-about mil-mb-30">
+          <div className="mil-up">
+            <p className="mil-up mil-mb-30 text-justify">
+              We design and deploy AI-driven automation solutions that streamline
+              operations, enhance decision-making, and unlock new efficiencies
+              across business processes. Our approach focuses on practical,
+              scalable AI that integrates seamlessly with existing systems.
+            </p>
+
+            <div className="mil-adaptive-left mil-up">
+              <Link
+                href="/ai-automation"
+                className="mil-link mil-dark mil-arrow-place"
+                style={{ display: 'inline-flex' }}
+              >
+                <span>Know More</span>
+              </Link>
             </div>
-            <div className="col-lg-7">
-              <div className="mil-about mil-mb-30">
-                <div className="mil-up">
-                  <p className="mil-up mil-mb-30 text-justify">
-                    We design and deploy AI-driven automation solutions that streamline operations, enhance decision-making, and unlock new efficiencies across business processes. Our approach focuses on practical, scalable AI that integrates seamlessly with existing systems.
-                  </p>
-                  <div className="mil-adaptive-left mil-up">
-                    <Link href="/ai-automation" className="mil-link mil-dark mil-arrow-place">
-                      <span>Know More</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Services Carousel */}
       <section className="services-carousel">
