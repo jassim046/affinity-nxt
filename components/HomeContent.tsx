@@ -911,7 +911,7 @@ export default function HomeContent() {
 
       {/* Clients Section */}
       {/* Clients Section */}
-<section>
+            <section>
   <div className="container-fluid mil-p-60-60">
     <div className="row align-items-center">
 
@@ -928,7 +928,19 @@ export default function HomeContent() {
               <div className="ai-partners-grid">
                 {clientLogos.map((logo, index) => (
                   <div key={index} className="ai-partner-item">
-                    <div className="ai-partner-card mil-border">
+                    <div
+                      className="ai-partner-card"
+                      style={{
+                        border: '1px solid rgba(0,0,0,0.15)',
+                        borderRadius: '8px',
+                        padding: '20px',
+                        height: '100%',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        background: '#fff'
+                      }}
+                    >
                       <div className="ai-partner-logo">
                         <Image
                           src={`/img/partners/${logo}`}
@@ -959,6 +971,7 @@ export default function HomeContent() {
     </div>
   </div>
 </section>
+
 
 
     </>
