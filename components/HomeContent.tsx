@@ -349,7 +349,7 @@ export default function HomeContent() {
       <div className="row mil-services-grid m-0">
 
         {/* Solution 1 */}
-        <div className="col-md-6 col-lg-3 mil-services-grid-item p-0">
+        <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
           <div className="mil-service-card-sm mil-up">
             <div className="ai-partner-logo mil-mb-30">
               <img src="/img/solution/1.png" className="img-fluid" alt="NAAC ERP" />
@@ -363,7 +363,7 @@ export default function HomeContent() {
         </div>
 
         {/* Solution 2 */}
-        <div className="col-md-6 col-lg-3 mil-services-grid-item p-0">
+        <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
           <div className="mil-service-card-sm mil-up">
             <div className="ai-partner-logo mil-mb-30">
               <img src="/img/solution/2.png" className="img-fluid" alt="Attendance App" />
@@ -377,7 +377,7 @@ export default function HomeContent() {
         </div>
 
         {/* Solution 3 */}
-        <div className="col-md-6 col-lg-3 mil-services-grid-item p-0">
+        <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
           <div className="mil-service-card-sm mil-up">
             <div className="ai-partner-logo mil-mb-30">
               <img src="/img/solution/3.png" className="img-fluid" alt="Fee Collection" />
@@ -390,7 +390,7 @@ export default function HomeContent() {
         </div>
 
         {/* Solution 4 */}
-        <div className="col-md-6 col-lg-3 mil-services-grid-item p-0">
+        <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
           <div className="mil-service-card-sm mil-up">
             <div className="ai-partner-logo mil-mb-30">
               <img src="/img/solution/4.png" className="img-fluid" alt="Logistics Tracking" />
@@ -404,7 +404,7 @@ export default function HomeContent() {
         </div>
 
         {/* Solution 5 */}
-        <div className="col-md-6 col-lg-3 mil-services-grid-item p-0">
+        <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
           <div className="mil-service-card-sm mil-up">
             <div className="ai-partner-logo mil-mb-30">
               <img src="/img/solution/5.png" className="img-fluid" alt="Temple Booking" />
