@@ -857,15 +857,38 @@ export default function HomeContent() {
       </section>
 
       {/* Clients Section */}
-      <section>
-        <div className="container mil-p-60-60">
-          <h2 className="mil-center industries-title mil-mb-30">Our <span className="mil-thin">Clients</span></h2>
-          <div className="ai-partners-grid">
-            {clientLogos.map((logo, index) => (
-              <div key={index} className="ai-partner-item">
-                <Image src={`/img/partners/${logo}`} alt="Client" width={120} height={60} />
+       <section>
+        <div className="container-fluid mil-p-60-60">
+          <div className="row align-items-center">
+            <div className="mil-complex-text justify-content-center mil-up mil-mb-5">
+              <h2 className="mil-center industries-title">
+                Our <span className="mil-thin">Clients</span>
+              </h2>
+            </div>
+            <div className="container">
+              <div className="row align-items-stretch">
+                <div className="col-lg-12 col-md-12 mil-p-60-20">
+                  <div className="ai-partners-wrap">
+                    <div className="ai-partners-grid">
+                      {clientLogos.map((logo, index) => (
+                        <div key={index} className="ai-partner-item">
+                          <div className="ai-partner-card">
+                            <div className="ai-partner-logo">
+                              <Image src={`/img/partners/${logo}`} alt={logo.replace('.png', '')} width={150} height={80} />
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
+            <div className="mil-adaptive-center mil-up" style={{ textAlign: 'center' }}>
+              <Link href="/web-and-apps" className="mil-link mil-dark mil-arrow-place" style={{ display: 'inline-flex' }}>
+                <span>View all</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
