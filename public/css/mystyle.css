@@ -6514,15 +6514,15 @@ header .logo {
 /* partner card box */
 .ai-partner-card {
  /*  background: #c0c0c040;*/
-  border: 1.8px solid #c9c9c9;  /* red border like reference */
-  border-radius: 12px;
+  border: 1.8px solid #c9c9c9 !important;  /* red border like reference */
+  border-radius: 12px !important;
  /* padding: 10px;
    height: 120px;*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform .18s ease, box-shadow .18s ease;
-  box-sizing: border-box;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform .18s ease, box-shadow .18s ease !important;
+  box-sizing: border-box !important;
 }
 
 /* logo container */
