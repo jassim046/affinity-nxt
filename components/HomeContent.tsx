@@ -150,9 +150,11 @@ export default function HomeContent() {
       </section>
 
      {/* About Section */}
+                 {/* About Section */}
 <section id="about">
   <div className="container mil-p-60-30">
     <div className="row justify-content-between align-items-center">
+
       <div className="col-lg-5 col-xl-4">
         <div className="mil-mb-90">
           <h2 className="mil-up mil-mb-30" style={{ fontSize: '35px' }}>
@@ -175,21 +177,19 @@ export default function HomeContent() {
             </p>
 
             <div className="mil-adaptive-left mil-up">
-              <Link
-                href="/ai-automation"
-                className="mil-link mil-dark mil-arrow-place"
-                style={{ display: 'inline-flex' }}
-              >
-                <span>Know More</span>
+              <Link href="/ai-automation" className="mil-link mil-dark mil-arrow-place">
+                <span className="mil-arrow">Know More</span>
               </Link>
             </div>
 
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 
       {/* Services Carousel */}
