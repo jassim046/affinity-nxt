@@ -384,45 +384,78 @@ export default function HomeContent() {
         </div>
       </section>
 
-      {/* Solutions Section */}
-      import React from 'react';
-     const SolutionsSection = () => {
-  const solutions = [
-    { img: "/img/solution/1.png", alt: "NAAC ERP", desc: "A NAAC-focused ERP for colleges, enabling effortless documentation and reporting." },
-    { img: "/img/solution/2.png", alt: "Attendance", desc: "Hybrid mobile app for tracking student attendance with FYUG support." },
-    { img: "/img/solution/3.png", alt: "Fee Collection", desc: "Secure fee collection platform for schools with real-time reporting." },
-    { img: "/img/solution/4.png", alt: "Logistics", desc: "Web app for tracking consignments in real-time for logistics companies." },
-    { img: "/img/solution/5.png", alt: "Temple", desc: "Online booking platform for temples with secure payment gateways." },
-  ];
-
-  return (
-    <section className="mil-dark-bg">
-      <div className="container mil-p-80-0">
-        <div className="mil-complex-text justify-content-center mil-mb-60">
-          <h2 className="mil-h1 mil-muted mil-center">
-            Our <span className="mil-thin">Solutions</span>
-          </h2>
-        </div>
-        <div className="row mil-services-grid m-0">
-          {solutions.map((item, index) => (
-            <div key={index} className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
-              <div 
-                className="mil-service-card-sm mil-up" 
-                style={{ opacity: 1, transform: 'translate(0px, 0px)' }}
-              >
-                <div className="ai-partner-logo mil-mb-30">
-                  <img src={item.img} alt={item.alt} />
+           {/* Solutions Section */}
+      <section className="ai-clients-services-section">
+        <div className="content-section">
+          <section className="mil-dark-bg">
+            <div className="mi-invert-fix">
+              <div className="mil-animation-frame">
+                <div className="mil-animation mil-position-1 mil-scale" data-value-1="2.4" data-value-2="1.4" style={{ top: '300px', right: '-100px' }}></div>
+                <div className="mil-animation mil-position-2 mil-scale" data-value-1="2" data-value-2="1" style={{ left: '150px' }}></div>
+              </div>
+              <div className="container mil-p-80-0">
+                <div className="mil-mb-30">
+                  <div className="mil-complex-text justify-content-center">
+                    <h2 className="mil-h1 mil-muted mil-center">Our <span className="mil-thin">Solutions</span></h2>
+                  </div>
                 </div>
-                <p className="mil-light-soft mil-mb-30">{item.desc}</p>
+                <div className="row mil-services-grid m-0">
+                  <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+                    <div className="mil-service-card-sm mil-up">
+                      <div className="ai-partner-logo mil-mb-30">
+                        <img src="/img/solution/1.png" className="img-fluid v-100" alt="NAAC ERP" />
+                      </div>
+                      <p className="mil-light-soft mil-mb-30">
+                        A NAAC-focused ERP for colleges, enabling effortless data entry, streamlined documentation, and compliance-ready reporting for accreditation and re-accreditation.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+                    <div className="mil-service-card-sm mil-up">
+                      <div className="ai-partner-logo mil-mb-30" >
+                        <img src="/img/solution/2.png" alt="Attendance App" />
+                      </div>
+                      <p className="mil-light-soft mil-mb-30">
+                        A hybrid mobile app for colleges to record, track, and report student attendance class-wise and hour-wise, with FYUG support and consolidated reporting.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+                    <div className="mil-service-card-sm mil-up">
+                      <div className="ai-partner-logosolution mil-mb-30">
+                        <img src="/img/solution/3.png" alt="Fee Collection" />
+                      </div>
+                      <p className="mil-light-soft mil-mb-30">
+                        A simple, secure fee collection platform for schools and colleges, offering online payments, automated receipts, and real-time reporting.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+                    <div className="mil-service-card-sm mil-up">
+                      <div className="ai-partner-logo mil-mb-30">
+                        <img src="/img/solution/4.png" alt="Logistics Tracking" />
+                      </div>
+                      <p className="mil-light-soft mil-mb-30">
+                        A web app for logistics companies that lets customers track consignments in real time with ease, improving transparency and customer trust.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-lg-2-5 mil-services-grid-item p-0">
+                    <div className="mil-service-card-sm mil-up">
+                      <div className="ai-partner-logo mil-mb-30">
+                        <img src="/img/solution/5.png" alt="Temple Booking" />
+                      </div>
+                      <p className="mil-light-soft mil-mb-30">
+                        A web app for temples that enables devotees to book offerings online with secure payments, multi-deity support, and user-friendly profiles.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          ))}
+          </section>
         </div>
-      </div>
-    </section>
-  );
-};
-
+      </section>
       {/* Empower Section */}
       <section id="industries">
         <div className="creative-stats-wrapper mil-p-60-60">
