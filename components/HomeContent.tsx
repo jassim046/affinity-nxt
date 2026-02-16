@@ -439,9 +439,11 @@ export default function HomeContent() {
       {/* Empower Section - CENTERED */}
       <section id="industries">
         <div className="creative-stats-wrapper mil-p-60-60">
-          <div className="text-center mil-mb-30">
-            <h2 className="industries-title">We <span className="mil-thin">Empower</span></h2>
+         <div className="mil-mb-30" style={{ textAlign: 'center' }}>
+           <h2 className="industries-title">
+             We <span className="mil-thin">Empower</span> </h2>
           </div>
+
           <div className="stats-grid">
             {industries.map((industry, index) => (
               <div key={index} className="stat-card">
