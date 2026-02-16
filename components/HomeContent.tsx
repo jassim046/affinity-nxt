@@ -177,10 +177,13 @@ export default function HomeContent() {
             </p>
 
             <div className="mil-adaptive-left mil-up">
-              <Link href="/ai-automation" className="mil-link mil-dark mil-arrow-place">
-                <span className="mil-arrow">Know More</span>
-              </Link>
-            </div>
+  <Link href="/ai-automation" className="mil-link mil-dark mil-arrow-place">
+    <span>
+      Know More <span aria-hidden="true">→</span>
+    </span>
+  </Link>
+</div>
+
 
           </div>
         </div>
@@ -458,11 +461,12 @@ export default function HomeContent() {
       <section>
         <div className="container-fluid mil-p-60-60">
           <div className="row align-items-center">
-            <div className="col-12 text-center mil-up mil-mb-5">
-              <h2 className="industries-title">
-                Our <span className="mil-thin">Clients</span>
+           <div className="col-12 mil-up mil-mb-5" style={{ textAlign: 'center' }}>
+            <h2 className="industries-title">
+              Our <span className="mil-thin">Clients</span>
               </h2>
             </div>
+
             <div className="container">
               <div className="row">
                 <div className="col-lg-12 mil-p-60-20">
@@ -482,11 +486,18 @@ export default function HomeContent() {
                 </div>
               </div>
             </div>
-            <div className="col-12 text-center mil-up">
-              <Link href="/web-and-apps" className="mil-link mil-dark mil-arrow-place" style={{ display: 'inline-flex' }}>
-                <span>View all</span>
-              </Link>
-            </div>
+          <div className="col-12 mil-up" style={{ textAlign: 'center' }}>
+  <Link
+    href="/web-and-apps"
+    className="mil-link mil-dark mil-arrow-place"
+    style={{ display: 'inline-flex' }}
+  >
+    <span>
+      View all <span aria-hidden="true">→</span>
+    </span>
+  </Link>
+</div>
+
           </div>
         </div>
       </section>
